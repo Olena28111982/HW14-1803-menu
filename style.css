@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: blanchedalmond;
+}
+.menu,
+.submenu {
+  list-style: none;
+  padding: 0;
+}
+.menu {
+  text-align: center;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+
+}
+
+.menu-link,
+.submenu-link {
+  display: block;
+  padding: 0.5em 0.8em;
+  width: 150px;
+  
+}
+.menu li ul {
+  display: none;
+}
+.menu li:hover > ul {
+  display: block;
+}
+.menu-item {
+  display: inline-block;
+  padding: 0 0.8em;
+   position: relative;
+}
+.submenu-item {
+  position: relative;
+}
+.submenu {
+  width: 150%;
+  position: absolute;
+  z-index: 10;
+}
+.submenu .submenu {
+  left: 100%;
+  top: 0;
+}
+.menu ul> li:hover {
+  background-color: rgba(221, 221, 236, 0.35);
+}
+/* .menu li::before{
+  content:url(./assets/icons/images-up.png);
+  position: absolute;
+  left: -25px;
+  top: -5px;
+  opacity: 0;
+}
+.menu li::before:hover{
+  opacity: 1; */} */
+
+
+.menu li:hover {
+  text-decoration: underline;
+
+}
+.menu li .submenu .submenu-item:hover{
+    background-color:rgba(139, 130, 130, 0.103);
+    text-decoration: none;
+
+}
+.span-tooltip {
+  position: absolute;
+  width: auto;
+  height: auto;
+  line-height: 15px;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+  color: black;
+  background: rgb(255, 255, 255);
+  border: 4px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  text-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 2px 0px;
+}
+
+.span-tooltip:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #ffffff transparent;
+  top: -23px;
+  left: center;
+}
+.menu-item:first-child::before {
+  content:url(./assets/icons/account-box\ \(1\).svg);
+  display: inline-block;
+  vertical-align: middle;
+}
+.menu-item:nth-child(n)::after{
+  content: url(./assets/icons/down_angle_icon_194685.png);
+  z-index: 1000;
+  display: inline-block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -10px;
+  top: 2px;}
+.menu-item:nth-child(3) li:nth-child(n+3):nth-child(-n+6)::after{
+  content: url(./assets/icons/righ.png);
+  position: absolute;
+  right: 5px;
+}
+.menu-item:nth-child(4) li:nth-child(-n+4)::after{
+  content:url(./assets/icons/righ.png);
+  position: absolute;
+  right:5px ;
+}
+.menu-item:nth-child(5) li:nth-child(-n+3)::after{
+  content:url(./assets/icons/righ.png);
+  position: absolute;
+  right:5px ;
+}
+.menu-item:first-child li:first-child::before {
+  content: url(./assets/icons/atlassian\ \(1\).svg);
+  display: inline-block;
+  vertical-align: middle;
+}
